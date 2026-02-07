@@ -1,0 +1,15 @@
+services:
+  fraud-detection-api:
+    build:
+      context: ..
+      dockerfile: deployment/dockerfile
+    container_name: credit_card_fraud_api
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./models:/models
+      - ./data:/data
+      - ./monitoring:/monitoring
+    environment:
+      - LOG_CFG=config/logging.yaml
+    command: uvicorn src.serving.api:app --host 0.0.0.0 --port 8000

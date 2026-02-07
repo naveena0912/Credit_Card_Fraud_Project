@@ -1,0 +1,8 @@
+# Fraud Detection API Reference
+
+## Overview 
+The Fraud Detection API provides real-time and batch endpoints to score transactions for fraud risk. 
+It is built with **FastAPI** and exposes REST endpoints for training the model using historical data, single transactions, batch requests, and CSV uploads.
+
+##Base URL (local development):
+http://localhost:8000
