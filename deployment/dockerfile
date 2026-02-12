@@ -12,10 +12,9 @@ COPY requirements.txt .
 RUN pip install --no-cache-dir --default-timeout=100 --retries 5 -r requirements.txt
 
 # Copy project files
-COPY src/ ./src/
-COPY config/ ./config/
-COPY data/ ./data/
-COPY models/ ./models/
+COPY ../src/ ./src/
+COPY ../config/ ./config/
+COPY ../monitoring/ ./monitoring/
 
 # Expose port for FastAPI
 EXPOSE 8000
