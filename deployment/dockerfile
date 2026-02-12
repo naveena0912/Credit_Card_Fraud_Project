@@ -16,7 +16,6 @@ COPY src/ ./src/
 COPY config/ ./config/
 COPY data/ ./data/
 COPY models/ ./models/
-COPY monitoring/ ./monitoring/
 
 # Expose port for FastAPI
 EXPOSE 8000
